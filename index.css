@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+html,
+body {
+  height: 100%;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  background: #f1f1f1;
+}
+
+.gradient {
+  background:#5C8395;
+  background: linear-gradient(
+    135deg,
+    #5C8395 0%,
+    #5C8395 100%
+  );
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    color: #5C8395;
+    padding: 0 15px 5px;
+  }
+h3 {
+    font-family: 'Abril Fatface', cursive;
+}
+h6 {
+    color:black;
+    text-align: center;
+    background-color: #f1f1f1;   
+}
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  background-color:#5C8395;
+  z-index:1;
+}
+.page-header {
+  /* margin-top: 4rem; */
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.feature {
+  color: #f1f1f1;
+}
+
+.feature ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+.feature ul li {
+  padding-left: 2rem;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  color: #f1f1f1;
+  height: 5rem;
+  width: 5rem;
+  font-size: 1.75rem;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  background-color: #f1f1f1;
+}
+
+.gallery img {
+  border-radius: 5%;
+}
+
+.services {
+  color: #f1f1f1;
+}
+
+footer {
+  color: #f1f1f1;
+  font-size: 1rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.carousel-caption{
+    background-color: black;
+    opacity: 70%;
+}
+
