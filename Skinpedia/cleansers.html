@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skinpedia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="index.css">
+
+  <!---Remaining tasks: Create a price filter, low-high, high-low utalizing values of products-->
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* 
+    .banner {
+      background: #a770ef;
+      background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+      background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+    } */
+    body{
+      background-color: #f1f1f1;
+    }
+    .container-fluid {
+      margin-top: 50px;
+    }
+    
+    * {
+      box-sizing: border-box
+    }
+    
+    #filters label {
+      background-color:#f1f1f1;
+      color: rgb(43, 41, 41);
+      border: none;
+      padding:5px;
+      margin: 0px;
+      text-align: left;
+    }
+    #sidebar {
+      padding:15px;
+      margin-top:20px;
+      width: 30%; 
+    }
+
+
+    @media (max-width: 800px){
+      .row {
+        margin-left: 5%;
+        height: 90%;
+        width: 90%;
+        margin-top:50px;
+      }
+      #mobile-sidebar{
+        margin-left:25px;
+      }
+      .filters-mobilebtn{
+        padding:10px;
+        margin-left:20px;
+      }
+      #filters-mobile label {
+        background-color:#f1f1f1;
+        color: rgb(77, 73, 73);
+        border: none;
+        padding:5px;
+        margin: 0px;
+        text-align: left;
+      }
+    } 
+    
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a href="#" class="navbar-brand"><h1>Skinpedia</h1></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ml-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="cleanser.html" class="nav-item nav-link active">Cleansers</a>
+            <a href="#" class="nav-item nav-link">Serums</a>
+            <a href="#" class="nav-item nav-link">Moisturizers</a>
+            <a href="sunscreens.html" class="nav-item nav-link">Sunscreens</a>
+        </div>
+    </div>
+</nav>
+<!-- BACK TO TOP BUTTON -->
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button">
+  <i class="fa fa-chevron-up" style="color:white"></i>
+</a>
+<!--END OF BACK TO TOP BUTTON-->
+
+<!--SIDEBAR FOR SPECIFICS-->
+ <section id="sidebar" class="collapse d-none d-md-block">
+      <div id="filters">
+        <!-- <button id="asc">sort by price asd</button>
+        <button id="desc">sort by price desc</button> -->
+        <div class="row">
+          <div class="col"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                  <h6 class="p-1 border-bottom">Skin Type</h6>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="oily" id="oily">
+                    Oily
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="dry" id="dry">
+                    Dry
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="normal" id="normal">
+                    Combination
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="sensitive" id="sensitive">
+                    Sensitive
+                  </label>
+            </div>
+          </div>
+          <div class="col"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Dermatologist</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="dray" id="dray">
+                 Dr. Dray
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="shah" id="shah">
+                 Dr. Shah
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="lim" id="lim">
+                 Dr. Lim
+              </label>
+              <br>
+              <h6 class="p-1 border-bottom">Other Specifics</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="makeup" id="makeup">
+                Removes Makeup
+              </label>
+           </div>
+         </div>
+
+        </div> 
+      </div>
+  </section>
+  <!--END-->
+
+
+  <!--MOBILE BTN-->
+  <div class="filters-mobilebtn">
+    <button class="btn btn-default border border-info d-md-none" type="button" data-toggle="collapse" data-target="#mobile-sidebar" aria-expanded="false" aria-controls="mobile-sidebar">Filters<span class="fa fa-filter pl-1"></span>
+    </button>
+  </div>
+  <!--SIDEBAR FOR SPECIFICS-->
+  <section id="mobile-sidebar" class="d-md-none collapse">
+      <div id="filters-mobile">
+        <div class="row">
+            <div class="col"> 
+              <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                    <h6 class="p-1 border-bottom">Skin Type</h6>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="oily" id="oily-mobile">
+                      Oily
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="dry" id="dry-mobile">
+                      Dry
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="sensitive" id="sensitive-mobile">
+                      Sensitive
+                    </label>
+                    <label class="btn btn-secondary">
+                       <input type="checkbox" name="specifics" value="normal" id="normal-mobile">
+                       Combination
+                    </label>
+              </div>
+            </div>
+            <div class="col"> 
+              <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                <h6 class="p-1 border-bottom">Dermatologist</h6>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="dray" id="dray-mobile">
+                   Dr. Dray
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="shah" id="shah-mobile">
+                   Dr. Shah
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="lim" id="lim-mobile">
+                   Dr. Lim
+                </label>
+                <br>
+                <h6 class="p-1 border-bottom">Other Specifics</h6>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="makeup" id="makeup-mobile">
+                  Removes Makeup
+                </label>
+             </div>
+           </div>
+        </div> 
+    </div>
+  </section>
+  <!--END-->
+
+<div class = "container-fluid">
+    <div class = "row">
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive makeup shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/Aveeno" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/ultra-calming-foaming-cleanser-xlsImpprod640030?sku=2120120&nrtv_cid=8ab4bd87263b22cdc02c29a95b88089e1e10221d130b3ab4f73d0ed17990fe50&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">Aveeno Ultra-Calming Foaming Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$11.49</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+
+    <!-- Gallery item -->
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive normal dry makeup shah">
+      <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/CeraVe_FoamDry" alt="" class="img-fluid card-img-top">
+        <div class="p-4">
+          <h5> <a href="
+            https://www.ulta.com/p/hydrating-cream-foam-cleanser-pimprod2018254?sku=2570170&nrtv_cid=300f2125e552c2c9af68467656e03c47cb3988c94d5aaa4453318e9fcc05262f&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1            
+            " class="text-dark">CeraVe Hydrating Cream-to-Foam Cleanser</a></h5>
+          <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+            <p class="small mb-0"><span class="font-weight-bold">$13.99</span></p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- End -->
+
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column normal oily shah lim">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/CeraVe_FoamOily.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/foaming-facial-cleanser-xlsImpprod5140065?sku=2575575&nrtv_cid=578fb5320287af5bb1cd3d8eb9cd9ed9e085827cd400c375de2438de6788a9ba&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+              " class="text-dark">CeraVe Foaming Facial Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$13.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Gallery item -->
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column normal sensitive dry shah dray lim">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/CeraVe_CleanserDry.jpg" alt="" class="img-fluid card-img-top">
+            <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/hydrating-facial-cleanser-with-ceramides-hyaluronic-acid-xlsImpprod4190255?sku=2541603&nrtv_cid=b5a4823f2c25ca0c08b1d639f5b6aeccdc3d39997c66f0e81dac074ccf54bc46&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">CeraVe Hydrating Facial Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                <p class="small mb-0"><span class="font-weight-bold">$13.99</span></p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column normal exfoliate shah lim">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/CeraVe_CleanserNormal.jfif" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/renewing-sa-cleanser-xlsImpprod13531041?sku=2283676&nrtv_cid=6f80bd41738beff32cdc9287e0520eec4a91159871dae23bc261f305bb01dafe&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+              " class="text-dark">CeraVe Renewing SA Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$13.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Gallery item -->
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive shah lim">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/Cetaphil_Gentle.jfif" alt="" class="img-fluid card-img-top">
+            <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/gentle-skin-cleanser-pimprod2028662?sku=2586968&nrtv_cid=bc2739f81014214aa4f97d8895772011fbd271e1701c2c67dc19d646fe8fa3ea&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">Cetaphil Gentle Skin Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                <p class="small mb-0"><span class="font-weight-bold">$10.99</span></p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive makeup shah dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/FirstAid.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.skinstore.com/first-aid-beauty-face-cleanser-142g/11054487.html?affil=awin&utm_content=http%3A%2F%2Fwww.linktr.ee%2Fdoctorly&utm_term=Social+Content&utm_source=AWin-758951&utm_medium=affiliate&utm_campaign=AffiliateWin&awc=15340_1641687375_72acb824754825615e2ca5284318ab37
+              " class="text-dark">First Aid Beauty Face Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$22.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->
+
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/Neutrogena.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/hydro-boost-gentle-cleansing-lotion-xlsImpprod17162817?sku=2521831&nrtv_cid=05f69e0e0ef5327e9e2f583490e63518f20e328bd2e84444b3200cb106cf9aaf&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+              " class="text-dark">Neutrogena Hydro Boost Gentle Cleansing Lotion</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$12.49</span></p>
+            </div>
+          </div>
+        </div>
+     </div>
+     <!-- End -->
+     
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive dry dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/avene" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.dermstore.com/avene-xera-calm-cleansing-oil-13.5fl.-oz/11117617.html?AID=13716219&PID=100149615&URL=https%3A%2F%2Fwww.dermstore.com%2Favene-xera-calm-cleansing-oil-13.5fl.-oz%2F11117617.html&affil=cj&utm_source=cj-100149615&utm_medium=affiliate&cjevent=f39a227270e411ec8238032f0a1c0e10&utm_campaign=CJ&pubname=Shop+My+Shelf%2C+Inc.&utm_content=Shop+My+Shelf%2C+Inc.&cjdata=MXxOfDB8WXww
+              " class="text-dark">Avene XeraCalm A.D Lipid-Replenishing Cleansing Oil</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$32.00</span></p>
+            </div>
+          </div>
+        </div>
+     </div>
+     <!-- End -->   
+
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive dry normal dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/larocheposay" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.dermstore.com/la-roche-posay-toleriane-hydrating-gentle-cleanser-various-sizes/12941178.html?AID=13716219&PID=100149615&URL=https%3A%2F%2Fwww.dermstore.com%2Fproduct_Hydrating%2BGentle%2BSoap%2BFree%2BCleanser_70418.htm&affil=cj&utm_source=cj-100149615&utm_medium=affiliate&cjevent=40cd13e770e511ec83c000920a1c0e11&utm_campaign=CJ&pubname=Shop+My+Shelf%2C+Inc.&utm_content=Shop+My+Shelf%2C+Inc.&cjdata=MXxOfDB8WXww
+              " class="text-dark">La Roche-Posay Toleriane Hydrating Gentle Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$11.99</span></p>
+            </div>
+          </div>
+        </div>
+     </div>
+     <!-- End -->
+
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column normal dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/aquanil.jpeg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.walmart.com/ip/Aquanil-Facial-Cleanser-Face-Wash-for-All-Skin-Types/46022391?irgwc=1&sourceid=imp_WGl0NuyztxyIWuXQ1j15gUj5UkG309URRS7W300&veh=aff&wmlspartner=imp_2340682&clickid=WGl0NuyztxyIWuXQ1j15gUj5UkG309URRS7W300&sharedid=&affiliates_ad_id=565706&campaign_id=9383
+              " class="text-dark">Aquanil Facial Cleanser Face Wash </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$18.36</span></p>
+            </div>
+          </div>
+        </div>
+     </div>
+     <!-- End -->
+
+     <!-- Gallery item -->
+     <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive dry makeup shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                
+              " class="text-dark">CeraVe</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$</span></p>
+            </div>
+          </div>
+        </div>
+     </div>
+     <!-- End -->
+
+
+
+
+
+     </div>
+</div>
+
+</body>
+
+</html>
+
