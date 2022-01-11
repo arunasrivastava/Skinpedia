@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skinpedia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="index.css">  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a href="#" class="navbar-brand"><h1>Skinpedia</h1></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ml-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="cleanser.html" class="nav-item nav-link">Cleansers</a>
+            <a href="treatments.html" class="nav-item nav-link active">Treatments</a>
+            <a href="moisturizers.html" class="nav-item nav-link">Moisturizers</a>
+            <a href="sunscreens.html" class="nav-item nav-link">Sunscreens</a>
+        </div>
+    </div>
+</nav>
+<!-- BACK TO TOP BUTTON -->
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button">
+  <i class="fa fa-chevron-up" style="color:white"></i>
+</a>
+<!--END OF BACK TO TOP BUTTON-->
+
+<!--SIDEBAR FOR SPECIFICS-->
+ <section id="sidebar" class="collapse d-none d-md-block">
+      <div id="filters">
+        <div class="row">
+          <div class="col"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                  <h6 class="p-1 border-bottom">Skin Type</h6>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="oily" id="oily">
+                    Oily
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="dry" id="dry">
+                    Dry
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="normal" id="normal">
+                    Combination
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="sensitive" id="sensitive">
+                    Sensitive
+                  </label>
+            </div>
+          </div>
+          <div class="col"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Dermatologist</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="dray" id="dray">
+                 Dr. Dray
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="shah" id="shah">
+                 Dr. Shah
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="lim" id="lim">
+                 Dr. Lim
+              </label>
+              <br>
+              <h6 class="p-1 border-bottom">Other Specifics</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="makeup" id="makeup">
+                Removes Makeup
+              </label>
+           </div>
+         </div>
+
+        </div> 
+      </div>
+  </section>
+  <!--END-->
+
+
+  <!--MOBILE BTN-->
+  <div class="filters-mobilebtn">
+    <button class="btn btn-default border border-info d-md-none" type="button" data-toggle="collapse" data-target="#mobile-sidebar" aria-expanded="false" aria-controls="mobile-sidebar">Filters<span class="fa fa-filter pl-1"></span>
+    </button>
+  </div>
+  <!--SIDEBAR FOR SPECIFICS-->
+  <section id="mobile-sidebar" class="d-md-none collapse">
+      <div id="filters-mobile">
+        <div class="row">
+            <div class="col"> 
+              <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                    <h6 class="p-1 border-bottom">Skin Type</h6>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="oily" id="oily-mobile">
+                      Oily
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="dry" id="dry-mobile">
+                      Dry
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="sensitive" id="sensitive-mobile">
+                      Sensitive
+                    </label>
+                    <label class="btn btn-secondary">
+                       <input type="checkbox" name="specifics" value="normal" id="normal-mobile">
+                       Combination
+                    </label>
+              </div>
+            </div>
+            <div class="col"> 
+              <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                <h6 class="p-1 border-bottom">Dermatologist</h6>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="dray" id="dray-mobile">
+                   Dr. Dray
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="shah" id="shah-mobile">
+                   Dr. Shah
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="lim" id="lim-mobile">
+                   Dr. Lim
+                </label>
+                <br>
+                <h6 class="p-1 border-bottom">Other Specifics</h6>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="makeup" id="makeup-mobile">
+                  Removes Makeup
+                </label>
+             </div>
+           </div>
+        </div> 
+    </div>
+  </section>
+  <!--END-->
+
+<div class = "container-fluid">
+    <div class = "row">
+
+      <!-- Gallery item -->
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column sensitive makeup shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Cleanser/Aveeno" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/ultra-calming-foaming-cleanser-xlsImpprod640030?sku=2120120&nrtv_cid=8ab4bd87263b22cdc02c29a95b88089e1e10221d130b3ab4f73d0ed17990fe50&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">Aveeno Ultra-Calming Foaming Cleanser</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$11.49</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+
+
+
+
+    </div>
+</div>
+
+</body>
+
+</html>
+

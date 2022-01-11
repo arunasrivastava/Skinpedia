@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skinpedia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="index.css">  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a href="#" class="navbar-brand"><h1>Skinpedia</h1></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ml-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="cleanser.html" class="nav-item nav-link">Cleansers</a>
+            <a href="treatments.html" class="nav-item nav-link">Treatments</a>
+            <a href="moisturizers.html" class="nav-item nav-link active">Moisturizers</a>
+            <a href="sunscreens.html" class="nav-item nav-link">Sunscreens</a>
+        </div>
+    </div>
+</nav>
+<!-- BACK TO TOP BUTTON -->
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button">
+  <i class="fa fa-chevron-up" style="color:white"></i>
+</a>
+<!--END OF BACK TO TOP BUTTON-->
+
+<!--SIDEBAR FOR SPECIFICS-->
+ <section id="sidebar" class="collapse d-none d-md-block">
+      <div id="filters">
+        <div class="row">
+          <div class="col-2"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                  <h6 class="p-1 border-bottom">Skin Type</h6>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="oily" id="oily">
+                    Oily
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="dry" id="dry">
+                    Dry
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="normal" id="normal">
+                    Combination
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="sensitive" id="sensitive">
+                    Sensitive
+                  </label>
+            </div>
+          </div>
+          <div class="col-2"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Dermatologist</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="dray" id="dray">
+                 Dr. Dray
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="shah" id="shah">
+                 Dr. Shah
+              </label>
+              <br>
+              <h6 class="p-1 border-bottom">Other Specifics</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="wrinkle" id="wrinkle">
+                Anti-Aging
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="redness" id="redness">
+                Redness
+              </label>
+           </div>
+         </div>
+
+         <div class="col-4">
+            <iframe width="380" height="215" src="https://www.youtube.com/embed/ph0tBLZcnas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
+         <div class="col-3">
+            <iframe width="380" height="215" src="https://www.youtube.com/embed/Fc5ppaw2tPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
+
+        </div> 
+      </div>
+  </section>
+  <!--END-->
+
+
+  <!--MOBILE BTN-->
+  <div class="filters-mobilebtn">
+    <button class="btn btn-default border border-info d-md-none" type="button" data-toggle="collapse" data-target="#mobile-sidebar" aria-expanded="false" aria-controls="mobile-sidebar">Filters<span class="fa fa-filter pl-1"></span>
+    </button>
+  </div>
+  <!--SIDEBAR FOR SPECIFICS-->
+  <section id="mobile-sidebar" class="d-md-none collapse">
+      <div id="filters-mobile">
+        <div class="row">
+            <div class="col"> 
+              <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                    <h6 class="p-1 border-bottom">Skin Type</h6>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="oily" id="oily-mobile">
+                      Oily
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="dry" id="dry-mobile">
+                      Dry
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="checkbox" name="specifics" value="sensitive" id="sensitive-mobile">
+                      Sensitive
+                    </label>
+                    <label class="btn btn-secondary">
+                       <input type="checkbox" name="specifics" value="normal" id="normal-mobile">
+                       Combination
+                    </label>
+              </div>
+            </div>
+            <div class="col"> 
+              <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                <h6 class="p-1 border-bottom">Dermatologist</h6>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="dray" id="dray-mobile">
+                   Dr. Dray
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="shah" id="shah-mobile">
+                   Dr. Shah
+                </label>
+                <br>
+                <h6 class="p-1 border-bottom">Other Specifics</h6>
+                <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="wrinkle" id="wrinkle-mobile">
+                    Anti-Aging
+                  </label>
+                <label class="btn btn-secondary">
+                    <input type="checkbox" name="specifics" value="redness" id="redness-mobile">
+                    Redness
+                </label>
+             </div>
+           </div>
+        </div> 
+    </div>
+  </section>
+  <!--END-->
+
+<div class = "container-fluid">
+    <div class = "row">
+
+      <!-- Gallery item -->
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column normal dry sensitive shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Skinfix" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://skinfix.com/collections/moisturizers/products/lipid-peptide-cream?variant=19409094115397
+                " class="text-dark">Skinfix Barrier+ Triple Lipid-Peptide Cream</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$52.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dry sensitive shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/larocheposay.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.laroche-posay.us/our-products/dry-skin-eczema/body-lotion/lipikar-balm-ap--moisturizer-for-dry-skin-3337872418570.html?nrtv_cid=0396aacf1d01c335ba167cb0bc4a3df4acbf4298b7b6735f7e4e397435b18daf&utm_source=narrativ&utm_medium=affiliate&utm_campaign=shopmyshelf&nrtv_as_src=1
+                " class="text-dark"> La Roche-Posay Lipikar Balm AP+ </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$19.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End --> 
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column oily normal sensitive shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Cerave_PM.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.target.com/p/cerave-face-moisturizer-pm-facial-moisturizing-lotion-night-cream-for-normal-to-oily-skin-with-hyaluronic-acid-and-niacinamide-2-fl-oz/-/A-76545854?clkid=79d7c0f1N6aaa11eca88ec1535e5484f9&lnm=81938&afid=shopmyshelf&ref=tgt_adv_xasd0002
+                " class="text-dark">CeraVe Face Moisturizer</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$9.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column oily normal sensitive redness shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Biossance" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.sephora.com/product/squalane-probiotic-gel-moisturizer-P416561?skuId=2051910&nrtv_cid=31e9183c36854681b336a672c81da84c2a3818912f3e403b94394fa27b8d307f&SubID=1361&nrtv_as_src=1&om_mmc=aff-linkshare-redirect-ty8NUtOSnl0&c3ch=Linkshare&c3nid=ty8NUtOSnl0&affid=ty8NUtOSnl0-QE58EOKf_lydRnyfa5dgxA&ranEAID=ty8NUtOSnl0&ranMID=2417&ranSiteID=ty8NUtOSnl0-QE58EOKf_lydRnyfa5dgxA&ranLinkID=10-1&browserdefault=true
+                " class="text-dark">Biossance Squalane + Probiotic Gel Moisturizer </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$52.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column wrinkle shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Neutrogena.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/rapid-wrinkle-repair-regenerating-cream-xlsImpprod15321221?sku=2501816&nrtv_cid=7e2197bfc35a5dabe7d98145cd5a2f55122ba832377269d30027586fe93409d3&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark"> Neutrogena Rapid Wrinkle Repair Regenerating Cream </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$33.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column redness sensitive shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/larocheposay_soothing.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.dermstore.com/la-roche-posay-toleriane-ultra-intense-soothing-moisturiser-for-very-sensitive-skin-1.35-fl.-oz/11429005.html?AID=13716219&PID=100149615&URL=https%3A%2F%2Fwww.dermstore.com%2Fla-roche-posay-toleriane-ultra-intense-soothing-moisturiser-for-very-sensitive-skin-1.35-fl.-oz%2F11429005.html&affil=cj&utm_source=cj-100149615&utm_medium=affiliate&cjevent=b7dddff672b611ec823804a00a1c0e10&utm_campaign=CJ&pubname=Shop+My+Shelf%2C+Inc.&utm_content=Shop+My+Shelf%2C+Inc.&cjdata=MXxOfDB8WXww
+                " class="text-dark">La Roche-Posay Toleriane Ultra Soothing Repair Moisturizer</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$29.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dry sensitive body shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Cerave_tub" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.target.com/p/cerave-moisturizing-cream-for-normal-to-dry-skin-16oz/-/A-13977967?clkid=79d7c0f1N6aaa11eca88ec1535e5484f9&lnm=81938&afid=shopmyshelf&ref=tgt_adv_xasd0002#lnk=sametab
+                " class="text-dark">CeraVe Moisturizing Cream</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$17.29</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column normal dry shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Cerave_daily" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/daily-moisturizing-body-face-lotion-with-hyaluronic-acid-xlsImpprod3530071?sku=2575576&nrtv_cid=65637a55a78d1399c9d4996cc28fa409c0af391c048adcdb446f62d474e690f2&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">CeraVe Daily Moisturizing</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$18.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dry normal shah dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Firstaid_repair" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.skinstore.com/first-aid-beauty-ultra-repair-cream-170g/11054488.html?affil=awin&utm_content=Shop+My+Shelf&utm_term=Editorial+Content&utm_source=AWin-740219&utm_medium=affiliate&utm_campaign=AffiliateWin&awc=15340_1641889294_dd465f3b75454a56ab861529e8bdda9a
+                " class="text-dark">First Aid Beauty Ultra Repair Cream</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$36.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column wrinkle normal sensitive dry shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Naturium.jfif" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://naturium.com/products/plant-ceramide-rich-moisture-cream?sscid=11k6_bik31&
+                " class="text-dark">Naturium Plant Ceramide Rich Moisture Cream</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$25.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column oily sensitive shah dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Aveeno.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/calm-restore-oat-gel-moisturizer-pimprod2017659?sku=2570004&nrtv_cid=bb1a17b63242c6e0f6f9471d18119ec936d3f0c8294fa0c86e06aeb5eb1ea8fe&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">Aveeno Calm + Restore Oat Gel</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$23.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dry normal shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Kiehls" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.sephora.com/product/ultra-facial-cream-P421996?skuId=2172526&nrtv_cid=f6716a357ce6ff65bbd1d8696410909ef20430593eddf775c43c6606152aa236&SubID=1361&nrtv_as_src=1&om_mmc=aff-linkshare-redirect-ty8NUtOSnl0&c3ch=Linkshare&c3nid=ty8NUtOSnl0&affid=ty8NUtOSnl0-oYKvOMUzHgkvVZPcvjberQ&ranEAID=ty8NUtOSnl0&ranMID=2417&ranSiteID=ty8NUtOSnl0-oYKvOMUzHgkvVZPcvjberQ&ranLinkID=10-1&browserdefault=true
+                " class="text-dark">Kiehl's Ultra Facial</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$33.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->      
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column wrinkle shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Firstaid_collagen" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.skinstore.com/first-aid-beauty-ultra-repair-firming-collagen-cream-48g/12755130.html?affil=awin&utm_content=Shop+My+Shelf&utm_term=Editorial+Content&utm_source=AWin-740219&utm_medium=affiliate&utm_campaign=AffiliateWin&awc=15340_1641889751_618cd8713c39643290b82a995e3b9423
+                " class="text-dark">First Aid Beauty Ultra Repair Firming Collagen Cream</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$42.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dry sensitive spf shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Cetaphil.JPG" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/healthy-radiance-whipped-day-cream-spf-30-pimprod2028659?nrtv_cid=0710834baf8c27e028a768f325cd44d01f8a294ac15e33e43be33ce2208d4dfe&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">Cetaphil Healthy Radiance Whipped Day Cream SPF 30</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$24.99</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->   
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column wrinkle shah">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Roc.jpeg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.ulta.com/p/retinol-correxion-max-daily-hydration-creme-pimprod2002111?sku=2534774&nrtv_cid=5c2ac2f66323a0e7a6b70f064aa84b560a53a989e85304db8fb85e97f9a3e295&utm_source=narrativ&utm_medium=cpc&utm_campaign=narrativ_premium_editorial&utm_content=shopmyshelf&nrtv_as_src=1
+                " class="text-dark">Roc Retinol Correxion Max Daily Hydration Crème</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$27.49</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->   
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column oily dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Neutrogena_gel.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.amazon.com/Neutrogena-Hyaluronic-Hydrating-Moisturizer-Gel-Cream/dp/B00NR1YQK4?dchild=1&keywords=neutrogena+hydroboost+gel+cream&qid=1617475633&rdc=1&sr=8-2&linkCode=sl1&tag=drdrayzday-20&linkId=8353bb09be7e27100086b73cf095db58&language=en_US&ref_=as_li_ss_tl
+                " class="text-dark">Neutrogena Hydro Boost</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$18.98</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->   
+    
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column oily wrinkle dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Dermartlogy_gel.JPG" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.atopalm.com/Dermartology_Gel_Moisturizer_p/83199.htm
+                " class="text-dark"> </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$48.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dry sensitive dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Rovectin.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.stylevana.com/en_US/rovectin-skin-essentials-barrier-repair-face-body-cream-175ml.html?smsclickid=037226c0-8b26-49a7-bb37-30d87ba64f8e&utm_source=shopmyshelf&utm_medium=referral&utm_campaign=&utm_term=drdrayzday
+                " class="text-dark">Rovectin Skin Essentials Barrier Repair</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$28.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Rohto.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.stylevana.com/en_US/rohto-mentholatum-care-cera-ap-face-body-milk-200ml.html?smsclickid=d9685fcc-2db4-4e40-ac12-d413dba49a79&utm_source=shopmyshelf&utm_medium=referral&utm_campaign=&utm_term=drdrayzday
+                " class="text-dark">Rohto Mentholatum Care Cera AP </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$18.79</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Paulas.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.paulaschoice.com/daily-replenishing-body-cream/345.html?clickid=yqiQzZ3OOxyIWuXQ1j15gUj5UkG3VEV1RS7W300&irgwc=1&utm_campaign=shopmyshelf&utm_medium=affiliate&utm_source=ImpactRadius&group=
+                " class="text-dark">Paula's Choice Daily Replenishing Body Cream</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$24.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dray">
+        <div class="bg-white rounded shadow-sm"><img src="img/Moisturizer/Eucerin.jpg" alt="" class="img-fluid card-img-top">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.amazon.com/Eucerin-Advanced-Repair-Skin-Lotion/dp/B003BMJGKE?tag=shopmyshelf00-20
+                " class="text-dark">Eucerin Advanced Repair Lotion</a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$12.49</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+    
+       
+
+
+
+
+
+    </div>
+</div>
+
+</body>
+
+</html>
+

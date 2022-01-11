@@ -11,68 +11,8 @@
   <script src="main.js"></script>
   <link rel="stylesheet" href="index.css">
 
-  <!---Remaining tasks: Create a price filter, low-high, high-low utalizing values of products-->
   
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-/* 
-    .banner {
-      background: #a770ef;
-      background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
-      background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
-    } */
-    body{
-      background-color: #f1f1f1;
-    }
-    .container-fluid {
-      margin-top: 50px;
-    }
-    
-    * {
-      box-sizing: border-box
-    }
-    
-    #filters label {
-      background-color:#f1f1f1;
-      color: rgb(43, 41, 41);
-      border: none;
-      padding:5px;
-      margin: 0px;
-      text-align: left;
-    }
-    #sidebar {
-      padding:15px;
-      margin-top:20px;
-      width: 40%; 
-    }
-
-
-    @media (max-width: 800px){
-      .row {
-        margin-left: 5%;
-        height: 90%;
-        width: 90%;
-        margin-top:50px;
-      }
-      #mobile-sidebar{
-        margin-left:25px;
-      }
-      .filters-mobilebtn{
-        padding:10px;
-        margin-left:20px;
-      }
-      #filters-mobile label {
-        background-color:#f1f1f1;
-        color: rgb(77, 73, 73);
-        border: none;
-        padding:5px;
-        margin: 0px;
-        text-align: left;
-      }
-    } 
-    
-  </style>
+  
 </head>
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -85,8 +25,8 @@
         <div class="navbar-nav ml-auto">
             <a href="index.html" class="nav-item nav-link">Home</a>
             <a href="cleansers.html" class="nav-item nav-link">Cleansers</a>
-            <a href="#" class="nav-item nav-link">Serums</a>
-            <a href="#" class="nav-item nav-link">Moisturizers</a>
+            <a href="treatments.html" class="nav-item nav-link">Treatments</a>
+            <a href="moisturizers.html" class="nav-item nav-link">Moisturizers</a>
             <a href="sunscreens.html" class="nav-item nav-link active">Sunscreens</a>
         </div>
     </div>
@@ -99,13 +39,11 @@
 
 <!--SIDEBAR FOR SPECIFICS-->
  <section id="sidebar" class="collapse d-none d-md-block">
-      <h6 class="p-1 border-bottom">Specifics</h6>
       <div id="filters">
-        <!-- <button id="asc">sort by price asd</button>
-        <button id="desc">sort by price desc</button> -->
         <div class="row">
-          <div class="col"> 
+          <div class="col-2"> 
             <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Specifics</h6>
               <label class="btn btn-secondary">
                 <input type="checkbox" name="specifics" value="tinted" id="tinted">
                 With Tint
@@ -120,19 +58,20 @@
               </label>
             </div>
           </div>
-          <div class="col"> 
+          <div class="col-2"> 
             <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Dermatologist</h6>
               <label class="btn btn-secondary">
                 <input type="checkbox" name="specifics" value="dray" id="dray">
-                 Recommended by Dr. Dray
+                 Dr. Dray
               </label>
               <label class="btn btn-secondary">
                 <input type="checkbox" name="specifics" value="shah" id="shah">
-                 Recommended by Dr. Shah
+                 Dr. Shah
               </label>
               <label class="btn btn-secondary">
                 <input type="checkbox" name="specifics" value="lim" id="lim">
-                 Recommended by Dr. Lim
+                 Dr. Lim
               </label>
            </div>
          </div>
@@ -151,38 +90,48 @@
   </div>
   <!--SIDEBAR FOR SPECIFICS-->
   <section id="mobile-sidebar" class="d-md-none collapse">
-    <div>
-      <h6 class="p-1 border-bottom">Specifics</h6>
       <div id="filters-mobile">
-        <div class="btn-group btn-group-vertical" data-toggle="buttons">
-          <label class="btn btn-secondary">
-            <input type="checkbox" name="specifics" value="tinted" id="tinted-mobile">
-            With Tint
-          </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox" name="specifics" value="no-tint" id="no-tint-mobile">
-            Without Tint
-          </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox" name="specifics" value="water" id="water-mobile">
-            Water Resistant 
-          </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox" name="specifics" value="dray" id="dray-mobile">
-            Recommended by Dr.Dray
-          </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox" name="specifics" value="shah" id="shah-mobile">
-            Recommended by Dr.Shah
-          </label>
-          <label class="btn btn-secondary">
-            <input type="checkbox" name="specifics" value="lim" id="lim-mobile">
-            Recommended by Dr.Lim
-          </label>          
-          
+        <div class="row">
+          <div class="col"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Specifics</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="tinted" id="tinted-mobile">
+                With Tint
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="no-tint" id="no-tint-mobile">
+                Without Tint
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="water" id="water-mobile">
+                Water Resistant 
+              </label>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Dermatologist</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="dray" id="dray-mobile">
+                Dr.Dray
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="shah" id="shah-mobile">
+                Dr.Shah
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="lim" id="lim-mobile">
+                Dr.Lim
+              </label>          
+            </div>
+          </div>
+
         </div>
+
       </div>
-    </div>
+
   </section>
   <!--END-->
 
