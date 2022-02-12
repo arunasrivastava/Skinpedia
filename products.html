@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skinpedia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="index.css">  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a href="#" class="navbar-brand"><h1>Skinpedia</h1></a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ml-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="cleansers.html" class="nav-item nav-link">Cleansers</a>
+            <!-- <a href="treatments.html" class="nav-item nav-link">Treatments</a> -->
+            <a href="moisturizers.html" class="nav-item nav-link">Moisturizers</a>
+            <a href="sunscreens.html" class="nav-item nav-link">Sunscreens</a>
+            <a href="products.html" class="nav-item nav-link active">Gadgets</a>
+        </div>
+    </div>
+</nav>
+<!-- BACK TO TOP BUTTON -->
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button">
+  <i class="fa fa-chevron-up" style="color:white"></i>
+</a>
+<!--END OF BACK TO TOP BUTTON-->
+
+<!--SIDEBAR FOR SPECIFICS-->
+ <section id="sidebar" class="collapse d-none d-md-block">
+      <div id="filters">
+        <div class="row">
+          <div class="col-2"> 
+            <div class="btn-group btn-group-vertical" data-toggle="buttons">
+              <h6 class="p-1 border-bottom">Dermatologist</h6>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="dray" id="dray">
+                 Dr. Dray
+              </label>
+              <label class="btn btn-secondary">
+                <input type="checkbox" name="specifics" value="shah" id="shah">
+                 Dr. Shah
+              </label>
+
+           </div>
+         </div>
+
+         <div class="col-4">
+            <iframe width="380" height="215" src="https://www.youtube.com/embed/VJeiG8r6CyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
+         <div class="col-4">
+            <iframe width="380" height="215" src="https://www.youtube.com/embed/xd2Zn7YOyxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
+
+        </div> 
+      </div>
+  </section>
+  <!--END-->
+
+
+  <!--MOBILE BTN-->
+  <div class="filters-mobilebtn">
+    <button class="btn btn-default border border-info d-md-none" type="button" data-toggle="collapse" data-target="#mobile-sidebar" aria-expanded="false" aria-controls="mobile-sidebar">Filters<span class="fa fa-filter pl-1"></span>
+    </button>
+  </div>
+  <!--SIDEBAR FOR SPECIFICS-->
+  <section id="mobile-sidebar" class="d-md-none collapse">
+      <div id="filters-mobile">
+        <div class="row">
+            <div class="col"> 
+              <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                <h6 class="p-1 border-bottom">Dermatologist</h6>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="dray" id="dray-mobile">
+                   Dr. Dray
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="checkbox" name="specifics" value="shah" id="shah-mobile">
+                   Dr. Shah
+                </label>
+             </div>
+           </div>
+        </div> 
+    </div>
+  </section>
+  <!--END-->
+
+<div class = "container-fluid">
+    <div class = "row">
+
+      <!-- Gallery item -->
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column dray">
+        <div class="bg-white rounded shadow-sm">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.dermstore.com/lightstim-for-acne-light-therapy/11333024.html?AID=13716219&PID=100149615&URL=https%3A%2F%2Fwww.dermstore.com%2Flightstim-for-acne-light-therapy%2F11333024.html&affil=cj&utm_source=cj-100149615&utm_medium=affiliate&cjevent=e49d1e958b2d11ec839401170a18050c&utm_campaign=CJ&pubname=Shop+My+Shelf%2C+Inc.&utm_content=Shop+My+Shelf%2C+Inc.&cjdata=MXxOfDB8WXww" class="text-dark">
+                <img src="img/Products/LightStim_Acne" alt="LightStim_Acne" class="img-fluid card-img-top">
+                LightStim for Acne 
+            </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$169.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->  
+  
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column shah">
+        <div class="bg-white rounded shadow-sm">
+          <div class="p-4">
+            <h5> <a href="
+                https://www.sephora.sg/products/dr-dennis-gross-spectralite-faceware-pro/v/default?irgwc=1&irgwc=1&aff_source=impact&utm_source=impact&utm_medium=affiliate&irclickid=wxhRm4UINxyITV8Qal2pJVYFUkGUZGzJY1G%3Aw40&utm_content=10078                " class="text-dark">          
+                <img src="img/Products/Dr.Dennis_FaceWarePro.jpg" alt="LightStim_Acne" class="img-fluid card-img-top">
+                Spectralite Faceware Pro
+            </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <p class="small mb-0"><span class="font-weight-bold">$709.00</span></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End -->     
+
+    <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column shah dray">
+            <div class="bg-white rounded shadow-sm">
+            <div class="p-4">
+                <h5> <a href="
+                    https://omniluxled.com/products/omnilux-contour-face?smsclickid=a18e979b-56b4-4764-afa2-b9bdad943fc3&smscode=DRSHAH10                    " class="text-dark"> 
+                    <img src="img/Products/Omnilux" alt="LightStim_Acne" class="img-fluid card-img-top">
+                    Omnilux Contour FACE
+                </a></h5>
+                <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                <p class="small mb-0"><span class="font-weight-bold">$395.00</span></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- End -->    
+    
+    <!-- Gallery item -->
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 column shah">
+        <div class="bg-white rounded shadow-sm">
+        <div class="p-4">
+            <h5> <a href="
+                https://us.currentbody.com/products/currentbody-skin-led-light-therapy-mask?awc=16364_1644579869_ce14e8c2e20be6b09f457d8111e73156&utm_source=Shop+My+Shelf+Inc.&utm_medium=affiliates&utm_campaign=740219                " class="text-dark"> 
+                <img src="img/Products/CurrentBody_SkinLED" alt="LightStim_Acne" class="img-fluid card-img-top">
+                CurrentBody Skin LED Mask
+            </a></h5>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+            <p class="small mb-0"><span class="font-weight-bold">$399.00</span></p>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- End -->  
+
+    </div>
+</div>
+
+</body>
+
+</html>
+
