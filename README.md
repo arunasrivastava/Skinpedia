@@ -1,6 +1,7 @@
 # skinpedia.github.io
 Website is available in GH pages or AWS S3 bucket: [Here](https://skinpedia.s3.us-west-2.amazonaws.com) 
-A website that compiles products that are recommended by board-certified dermatologists 
+
+## A website that compiles products that are recommended by board-certified dermatologists 
 
 Key Focuses: 
 * Front-end development
