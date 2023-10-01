@@ -1,5 +1,5 @@
 # skinpedia.github.io
-Website is available in GH pages or AWS: [Here]([https://link-url-here.org](https://skinpedia.s3.us-west-2.amazonaws.com/products.html))  
+Website is available in GH pages or AWS: [Here](https://skinpedia.s3.us-west-2.amazonaws.com/products.html) 
 A website that compiles products that are recommended by board-certified dermatologists 
 
 Key Focuses: 
