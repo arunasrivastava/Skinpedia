@@ -1,5 +1,5 @@
 # skinpedia.github.io
-Website is available in GH pages or AWS S3 bucket: [Here](skinpedia.github.io) 
+Website is available in GH pages or AWS S3 bucket on [skinpedia.github.io](skinpedia.github.io)
 
 ## A website that compiles products that are recommended by board-certified dermatologists 
 
